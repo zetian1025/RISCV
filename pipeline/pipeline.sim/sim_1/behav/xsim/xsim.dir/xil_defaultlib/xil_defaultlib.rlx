@@ -1,0 +1,21 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+D:/code/RISCV/pipeline/pipeline.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sim_1/imports/new/top_sim.v,1626767956,verilog,,,,top_sim,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/ALU.v,1625652894,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Control.v,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/PARAM.v,ALU,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Control.v,1626771806,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_Imm.v,,Control,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_Imm.v,1625652894,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_B.v,,Mux_Imm,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_B.v,1625652894,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_wb.v,,Mux_op_B,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_wb.v,1625652894,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_wd.v,,Mux_wb,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_wd.v,1625652894,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/NPC.v,,Mux_wd,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/NPC.v,1626771265,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/PC.v,,NPC,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/PARAM.v,1625635252,verilog,,,,,,,,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/PC.v,1625812032,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/RegFile.v,,PC,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/RegFile.v,1625652894,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/miniRv.v,,RegFile,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/miniRv.v,1626768457,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sim_1/imports/new/top_sim.v,,miniRv,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/cpuclk/cpuclk.v,1626766934,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/ALU.v,,cpuclk,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v,1626766934,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/cpuclk/cpuclk.v,,cpuclk_clk_wiz,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/data_mem/sim/data_mem.v,1626769439,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/inst_mem/sim/inst_mem.v,,data_mem,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,
+D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/inst_mem/sim/inst_mem.v,1626771334,verilog,,D:/code/RISCV/pipeline/pipeline.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v,,inst_mem,,,../../../../pipeline.srcs/sources_1/ip/cpuclk,,,,,

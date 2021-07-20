@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../pipeline.srcs/sources_1/ip/cpuclk" \
+"../../../../pipeline.srcs/sources_1/ip/data_mem/sim/data_mem.v" \
+"../../../../pipeline.srcs/sources_1/ip/inst_mem/sim/inst_mem.v" \
+"../../../../pipeline.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" \
+"../../../../pipeline.srcs/sources_1/ip/cpuclk/cpuclk.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/ALU.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/Control.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/Mux_Imm.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/Mux_op_B.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/Mux_wb.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/Mux_wd.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/NPC.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/PC.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/RegFile.v" \
+"../../../../pipeline.srcs/sources_1/imports/new/miniRv.v" \
+"../../../../pipeline.srcs/sim_1/imports/new/top_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

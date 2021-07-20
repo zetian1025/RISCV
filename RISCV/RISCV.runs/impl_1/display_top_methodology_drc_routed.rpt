@@ -1,0 +1,449 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Jul 10 15:57:07 2021
+| Host         : DESKTOP-6I6NG23 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file display_top_methodology_drc_routed.rpt -pb display_top_methodology_drc_routed.pb -rpx display_top_methodology_drc_routed.rpx
+| Design       : display_top
+| Device       : xc7a100tfgg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 82
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
+| TIMING-14 | Warning  | LUT on the clock tree                                            | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 31         |
+| TIMING-20 | Warning  | Non-clocked latch                                                | 48         |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin                        | 1          |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net clk_i_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): UCLK/clk_in1, clk_i_IBUF_inst/O, clk_v_reg/C, cnt_v_reg[0]/C, cnt_v_reg[11]/C, cnt_v_reg[10]/C, cnt_v_reg[4]/C, cnt_v_reg[3]/C, cnt_v_reg[1]/C, cnt_v_reg[2]/C, cnt_v_reg[8]/C, cnt_v_reg[7]/C, cnt_v_reg[6]/C, cnt_v_reg[5]/C, cnt_v_reg[9]/C (the first 15 of 15 listed)
+Related violations: <none>
+
+TIMING-14#1 Warning
+LUT on the clock tree  
+The LUT clk_BUFG_inst_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin clk_v_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin cnt_v_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin display/led0_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin display/led1_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Warning
+Non-clocked sequential cell  
+The clock pin display/led2_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Warning
+Non-clocked sequential cell  
+The clock pin display/led3_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Warning
+Non-clocked sequential cell  
+The clock pin display/led4_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Warning
+Non-clocked sequential cell  
+The clock pin display/led5_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Warning
+Non-clocked sequential cell  
+The clock pin display/led6_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Warning
+Non-clocked sequential cell  
+The clock pin display/led7_en_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Warning
+Non-clocked sequential cell  
+The clock pin display/led_ca_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cb_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cc_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cd_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Warning
+Non-clocked sequential cell  
+The clock pin display/led_ce_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cf_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cg_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Warning
+Non-clocked sequential cell  
+The clock pin display/led_cnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch mini_rv_u/ALU/branch_legal_reg cannot be properly analyzed as its control pin mini_rv_u/ALU/branch_legal_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/Imm_sel_reg[0] cannot be properly analyzed as its control pin mini_rv_u/Control/Imm_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/Imm_sel_reg[1] cannot be properly analyzed as its control pin mini_rv_u/Control/Imm_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/alu_B_sel_reg cannot be properly analyzed as its control pin mini_rv_u/Control/alu_B_sel_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/alu_op_reg[0] cannot be properly analyzed as its control pin mini_rv_u/Control/alu_op_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/alu_op_reg[1] cannot be properly analyzed as its control pin mini_rv_u/Control/alu_op_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/alu_op_reg[2] cannot be properly analyzed as its control pin mini_rv_u/Control/alu_op_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/branch_sel_reg[0] cannot be properly analyzed as its control pin mini_rv_u/Control/branch_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/branch_sel_reg[1] cannot be properly analyzed as its control pin mini_rv_u/Control/branch_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/branch_sel_reg[2] cannot be properly analyzed as its control pin mini_rv_u/Control/branch_sel_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/pc_sel_reg[0] cannot be properly analyzed as its control pin mini_rv_u/Control/pc_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/pc_sel_reg[1] cannot be properly analyzed as its control pin mini_rv_u/Control/pc_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/reg_write_reg cannot be properly analyzed as its control pin mini_rv_u/Control/reg_write_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/wb_sel_reg[0] cannot be properly analyzed as its control pin mini_rv_u/Control/wb_sel_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/wb_sel_reg[1] cannot be properly analyzed as its control pin mini_rv_u/Control/wb_sel_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch mini_rv_u/Control/wd_sel_reg cannot be properly analyzed as its control pin mini_rv_u/Control/wd_sel_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[0] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[10] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[11] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[12] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[13] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[14] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[15] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[16] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[17] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[18] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[19] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[1] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[20] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[21] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[22] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[23] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[24] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[25] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[26] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[27] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[28] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[29] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[2] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[30] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[31] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[3] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[4] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[5] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[6] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[7] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[8] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch mini_rv_u/Mux_wb/_wb_data_reg[9] cannot be properly analyzed as its control pin mini_rv_u/Mux_wb/_wb_data_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock UCLK/inst/clk_in1 is created on an inappropriate internal pin UCLK/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+

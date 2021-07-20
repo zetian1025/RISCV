@@ -1,0 +1,529 @@
+
+*** Running vivado
+    with args -log display_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source display_top.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source display_top.tcl -notrace
+Command: synth_design -top display_top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13468 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 395.930 ; gain = 101.563
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'display_top' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/display_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [D:/code/RISCV/RISCV/RISCV.runs/synth_1/.Xil/Vivado-11948-DESKTOP-6I6NG23/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [D:/code/RISCV/RISCV/RISCV.runs/synth_1/.Xil/Vivado-11948-DESKTOP-6I6NG23/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'miniRv' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/miniRv.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IF' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/IF.v:23]
+INFO: [Synth 8-6157] synthesizing module 'NPC' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'NPC' (2#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/NPC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IF' (3#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/IF.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (4#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/PC.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Mux_Imm' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_Imm.v:23]
+INFO: [Synth 8-226] default block is never used [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_Imm.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Mux_Imm' (5#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_Imm.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Mux_wd' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_wd.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Mux_wd' (6#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_wd.v:22]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/RegFile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (7#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/RegFile.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Control' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:50]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:65]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:44]
+WARNING: [Synth 8-567] referenced signal 'rst_i' should be on the sensitivity list [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'Control' (8#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Mux_op_B' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_op_B.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Mux_op_B' (9#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_op_B.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/ALU.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Mux_wb' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_wb.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Mux_wb' (11#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_wb.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'miniRv' (12#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/miniRv.v:23]
+INFO: [Synth 8-6157] synthesizing module 'prgrom' [D:/code/RISCV/RISCV/RISCV.runs/synth_1/.Xil/Vivado-11948-DESKTOP-6I6NG23/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prgrom' (13#1) [D:/code/RISCV/RISCV/RISCV.runs/synth_1/.Xil/Vivado-11948-DESKTOP-6I6NG23/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dram' [D:/code/RISCV/RISCV/RISCV.runs/synth_1/.Xil/Vivado-11948-DESKTOP-6I6NG23/realtime/dram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dram' (14#1) [D:/code/RISCV/RISCV/RISCV.runs/synth_1/.Xil/Vivado-11948-DESKTOP-6I6NG23/realtime/dram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'display' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/imports/RTL/display.v:1]
+INFO: [Synth 8-226] default block is never used [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/imports/RTL/display.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'display' (15#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/imports/RTL/display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'display_top' (16#1) [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/display_top.v:23]
+WARNING: [Synth 8-3331] design display has unconnected port busy
+WARNING: [Synth 8-3331] design Control has unconnected port funct7[6]
+WARNING: [Synth 8-3331] design Control has unconnected port funct7[4]
+WARNING: [Synth 8-3331] design Control has unconnected port funct7[3]
+WARNING: [Synth 8-3331] design Control has unconnected port funct7[2]
+WARNING: [Synth 8-3331] design Control has unconnected port funct7[1]
+WARNING: [Synth 8-3331] design Control has unconnected port funct7[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 451.980 ; gain = 157.613
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 451.980 ; gain = 157.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 451.980 ; gain = 157.613
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc] for cell 'UCLK'
+Finished Parsing XDC File [d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc] for cell 'UCLK'
+Parsing XDC File [d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/prgrom/prgrom/prgrom_in_context.xdc] for cell 'imem'
+Finished Parsing XDC File [d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/prgrom/prgrom/prgrom_in_context.xdc] for cell 'imem'
+Parsing XDC File [d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/dram/dram/dram_in_context.xdc] for cell 'dmem'
+Finished Parsing XDC File [d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/dram/dram/dram_in_context.xdc] for cell 'dmem'
+Parsing XDC File [D:/code/RISCV/RISCV/RISCV.srcs/constrs_1/imports/XDC/pin.xdc]
+Finished Parsing XDC File [D:/code/RISCV/RISCV/RISCV.srcs/constrs_1/imports/XDC/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/code/RISCV/RISCV/RISCV.srcs/constrs_1/imports/XDC/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/display_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/display_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 813.539 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 813.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 813.539 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 813.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 813.539 ; gain = 519.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 813.539 ; gain = 519.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_i. (constraint file  d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_i. (constraint file  d:/code/RISCV/RISCV/RISCV.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for UCLK. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for imem. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dmem. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 813.539 ; gain = 519.172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "RegFile_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegFile_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pc_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "wd_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "alu_A_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "Imm_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "branch_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/ALU.v:34]
+INFO: [Synth 8-5545] ROM "branch_legal0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "branch_legal0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "clk_v" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'Imm_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'wd_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'wb_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'pc_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:42]
+WARNING: [Synth 8-327] inferring latch for variable 'branch_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:96]
+WARNING: [Synth 8-327] inferring latch for variable 'alu_op_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'alu_A_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'alu_B_sel_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'reg_write_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_write_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Control.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'branch_legal_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/ALU.v:48]
+WARNING: [Synth 8-327] inferring latch for variable '_wb_data_reg' [D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/Mux_wb.v:34]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 813.539 ; gain = 519.172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 35    
+	               12 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   9 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 36    
+	   9 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module display_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module NPC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module IF 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Mux_Imm 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module Mux_wd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module RegFile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 32    
+Module Control 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   9 Input      2 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module Mux_op_B 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+Module Mux_wb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module miniRv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 1     
+Module display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   8 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5587] ROM size for "mini_rv_u/Control/Imm_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "mini_rv_u/Control/wd_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "mini_rv_u/Control/wb_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "mini_rv_u/Control/pc_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mini_rv_u/Control/branch_sel" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "mini_rv_u/Control/alu_A_sel" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5545] ROM "mini_rv_u/ALU/branch_legal0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "mini_rv_u/ALU/branch_legal0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "clk_v" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\display/led_dp_reg )
+WARNING: [Synth 8-3332] Sequential element (mini_rv_u/Control/alu_A_sel_reg) is unused and will be removed from module display_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 813.539 ; gain = 519.172
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'UCLK/clk_out1' to pin 'UCLK/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 813.539 ; gain = 519.172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cpuclk        |         1|
+|2     |prgrom        |         1|
+|3     |dram          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |cpuclk |     1|
+|2     |dram   |     1|
+|3     |prgrom |     1|
+|4     |BUFG   |     2|
+|5     |CARRY4 |    43|
+|6     |LUT1   |    10|
+|7     |LUT2   |    89|
+|8     |LUT3   |    98|
+|9     |LUT4   |   101|
+|10    |LUT5   |   228|
+|11    |LUT6   |   862|
+|12    |MUXF7  |   274|
+|13    |FDCE   |  1049|
+|14    |FDPE   |    38|
+|15    |FDRE   |    32|
+|16    |LD     |    47|
+|17    |LDC    |     2|
+|18    |IBUF   |     2|
+|19    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------+--------+------+
+|      |Instance              |Module  |Cells |
++------+----------------------+--------+------+
+|1     |top                   |        |  2959|
+|2     |  display             |display |    30|
+|3     |  mini_rv_u           |miniRv  |  2810|
+|4     |    ALU               |ALU     |     9|
+|5     |    Control           |Control |   515|
+|6     |    Mux_wb            |Mux_wb  |    64|
+|7     |    PC                |PC      |   111|
+|8     |    Regfile           |RegFile |  2042|
+|9     |    instruction_fetch |IF      |    40|
+|10    |      NPC             |NPC     |    40|
++------+----------------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 960.625 ; gain = 666.258
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 960.625 ; gain = 304.699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 960.625 ; gain = 666.258
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 366 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 960.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 49 instances were transformed.
+  LD => LDCE: 46 instances
+  LD => LDCE (inverted pins: G): 1 instances
+  LDC => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+105 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 960.625 ; gain = 677.734
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 960.625 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/code/RISCV/RISCV/RISCV.runs/synth_1/display_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file display_top_utilization_synth.rpt -pb display_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 10 15:50:51 2021...

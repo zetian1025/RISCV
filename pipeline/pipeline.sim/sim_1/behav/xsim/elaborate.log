@@ -1,0 +1,31 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/code/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto b27a2fc9cf1a46f3873e03c25aa28c84 --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_sim_behav xil_defaultlib.top_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=33,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.inst_mem
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.Mux_Imm
+Compiling module xil_defaultlib.Mux_wd
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Mux_op_B
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.NPC
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.data_mem
+Compiling module xil_defaultlib.Mux_wb
+Compiling module xil_defaultlib.miniRv
+Compiling module xil_defaultlib.top_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_sim_behav

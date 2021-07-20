@@ -1,0 +1,115 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Jul 10 15:54:03 2021
+| Host         : DESKTOP-6I6NG23 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file display_top_control_sets_placed.rpt
+| Design       : display_top
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    46 |
+| Unused register locations in slices containing registers |    57 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            3 |
+|      2 |            3 |
+|      3 |            1 |
+|      4 |            1 |
+|     13 |            1 |
+|    16+ |           37 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              78 |           44 |
+| No           | No                    | Yes                    |              63 |           23 |
+| No           | Yes                   | No                     |               2 |            1 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1024 |          498 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------+---------------------------------------+-------------------------+------------------+----------------+
+|                 Clock Signal                 |             Enable Signal             |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
++----------------------------------------------+---------------------------------------+-------------------------+------------------+----------------+
+|  mini_rv_u/Control/reg_write_reg_i_2_n_1     |                                       |                         |                1 |              1 |
+|  mini_rv_u/Control/wd_sel0_out               |                                       |                         |                1 |              1 |
+| ~mini_rv_u/Control/branch_sel[1]             |                                       |                         |                1 |              1 |
+|  mini_rv_u/Control/wb_sel_reg[1]_i_1_n_1     |                                       |                         |                1 |              2 |
+|  mini_rv_u/Control/Imm_sel_reg[1]_i_2_n_1    |                                       |                         |                1 |              2 |
+|  mini_rv_u/Control/pc_sel_reg[1]_i_2_n_1     |                                       | mini_rv_u/Regfile/rst_n |                1 |              2 |
+|  mini_rv_u/Control/branch_sel_reg[2]_i_1_n_1 |                                       |                         |                2 |              3 |
+|  mini_rv_u/Control/alu_B_sel_reg_i_2_n_1     |                                       |                         |                2 |              4 |
+|  clk_i_IBUF                                  |                                       | display/rst             |                3 |             13 |
+|  clk_v_reg_n_1                               |                                       | display/rst             |                3 |             18 |
+| ~clk_BUFG                                    |                                       |                         |               15 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8]_2[0]  | mini_rv_u/Regfile/rst_n |               11 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10]_2[0] | mini_rv_u/Regfile/rst_n |               18 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7]_0[0]  | mini_rv_u/Regfile/rst_n |               13 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9]_4[0]  | mini_rv_u/Regfile/rst_n |               13 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7]_4[0]  | mini_rv_u/Regfile/rst_n |               18 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10]_3[0] | mini_rv_u/Regfile/rst_n |               15 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8]_1[0]  | mini_rv_u/Regfile/rst_n |               14 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9]_2[0]  | mini_rv_u/Regfile/rst_n |               16 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7]_1[0]  | mini_rv_u/Regfile/rst_n |               15 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8][0]    | mini_rv_u/Regfile/rst_n |               15 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[11]_1[0] | mini_rv_u/Regfile/rst_n |               18 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7]_3[0]  | mini_rv_u/Regfile/rst_n |               14 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9]_3[0]  | mini_rv_u/Regfile/rst_n |               11 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9]_0[0]  | mini_rv_u/Regfile/rst_n |               13 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8]_4[0]  | mini_rv_u/Regfile/rst_n |               14 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10][0]   | mini_rv_u/Regfile/rst_n |               19 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10]_0[0] | mini_rv_u/Regfile/rst_n |               18 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9]_5[0]  | mini_rv_u/Regfile/rst_n |               12 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[11]_0[0] | mini_rv_u/Regfile/rst_n |               19 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7][0]    | mini_rv_u/Regfile/rst_n |               15 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7]_5[0]  | mini_rv_u/Regfile/rst_n |               14 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9]_1[0]  | mini_rv_u/Regfile/rst_n |               11 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10]_5[0] | mini_rv_u/Regfile/rst_n |               18 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10]_1[0] | mini_rv_u/Regfile/rst_n |               17 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[10]_4[0] | mini_rv_u/Regfile/rst_n |               19 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8]_0[0]  | mini_rv_u/Regfile/rst_n |               18 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8]_5[0]  | mini_rv_u/Regfile/rst_n |               17 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[8]_3[0]  | mini_rv_u/Regfile/rst_n |               14 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[11][0]   | mini_rv_u/Regfile/rst_n |               16 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[9][0]    | mini_rv_u/Regfile/rst_n |               14 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/bbstub_spo[7]_2[0]  | mini_rv_u/Regfile/rst_n |               19 |             32 |
+| ~clk_BUFG                                    | mini_rv_u/Control/E[0]                | mini_rv_u/Regfile/rst_n |               20 |             32 |
+|  clk_BUFG                                    |                                       | mini_rv_u/Regfile/rst_n |               17 |             32 |
+|  n_0_1306_BUFG                               |                                       |                         |               20 |             32 |
+|  clk_BUFG                                    |                                       |                         |             2048 |           8192 |
++----------------------------------------------+---------------------------------------+-------------------------+------------------+----------------+
+
+

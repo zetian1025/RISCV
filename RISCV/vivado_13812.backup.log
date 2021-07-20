@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul  7 13:21:06 2021
+# Process ID: 13812
+# Current directory: D:/code/RISCV/RISCV
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5676 D:\code\RISCV\RISCV\RISCV.xpr
+# Log file: D:/code/RISCV/RISCV/vivado.log
+# Journal file: D:/code/RISCV/RISCV\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/code/RISCV/RISCV/RISCV.xpr
+INFO: [Project 1-313] Project file moved from '/home/zetian/Tools/others/Xilinx_Lab/RISCV' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/code/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 704.660 ; gain = 93.063
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/top.v w ]
+add_files D:/code/RISCV/RISCV/RISCV.srcs/sources_1/new/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul  7 14:10:33 2021...
