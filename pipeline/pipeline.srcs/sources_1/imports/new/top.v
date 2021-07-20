@@ -38,6 +38,8 @@ module top(
     wire [31:0] ID_reg2_data;
     wire [31:0] ID_write_data;
     wire [31:0] ID_Jalr;
+    wire [31:0] ID_ALU_B;
+    wire [31:0] ID_ALU_A;
     
     assign ID_Jalr  = (ID_Imm32 & -1) + ID_reg1_data;
 
@@ -56,7 +58,6 @@ module top(
     reg  [2:0]      EX_alu_op;
     wire            EX_Branch_legal;
 
-    reg  [31:0]     EX_pc;
     reg  [31:0]     EX_Imm_J;
     reg  [31:0]     EX_Imm_B;
     reg  [31:0]     EX_Jalr;
@@ -99,17 +100,23 @@ module top(
     wire [1:0]  ID_pc_sel;
     wire        ID_wd_sel;
     wire [1:0]  ID_wb_sel;
+
+    //debug
+    reg ID_have_inst;
+    reg EX_have_inst;
+    reg MEM_have_inst;
+    reg WB_have_inst;
     
     // IF
     inst_mem imem(
-        .a      (IF_pc[15:2]),
+        .a      (EX_pc[15:2]),
         .spo    (IF_instruction)
     );
 
     PC PC(
         .clk    (clk),
         .rst_n  (rst_n),
-        .PC_i   (IF_npc),
+        .PC_i   (EX_npc),
         .PC_o   (IF_pc)
     );
 
@@ -123,6 +130,16 @@ module top(
         .ID_pc          (ID_pc          ),
         .ID_instruction (ID_instruction )
     );
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            ID_have_inst <= 0;
+        end else if (IF_instruction != ID_instruction) begin
+            ID_have_inst <= 1;
+        end else begin
+            ID_have_inst <= 0;
+        end
+    end
 
     // ID
     // Assign decode instruction to variables
@@ -206,6 +223,7 @@ module top(
         .ID_pc_sel     (ID_pc_sel     ),
         .ID_rd         (ID_rd         ),
         .ID_reg_write  (ID_reg_write  ),
+        .ID_have_inst  (ID_have_inst  ),
         .EX_mem_write  (EX_mem_write  ),
         .EX_reg2_data  (EX_reg2_data  ),
         .EX_Imm_U      (EX_Imm_U      ),
@@ -221,7 +239,8 @@ module top(
         .EX_Jalr       (EX_Jalr       ),
         .EX_pc_sel     (EX_pc_sel     ),
         .EX_rd         (EX_rd         ),
-        .EX_reg_write  (EX_reg_write  )
+        .EX_reg_write  (EX_reg_write  ),
+        .EX_have_inst  (EX_have_inst  )
     );
     
 
@@ -237,6 +256,7 @@ module top(
     
     NPC NPC(
         .clk            (clk),
+        .rst_n          (rst_n),
         .pc             (EX_pc),
         .Imm_J          (EX_Imm_J),
         .Imm_B          ((EX_Branch_legal == 1) ? EX_Imm_B : (EX_pc + 32'h4)),
@@ -258,6 +278,7 @@ module top(
         .EX_wd_sel     (EX_wd_sel     ),
         .EX_rd         (EX_rd         ),
         .EX_reg_write  (EX_reg_write  ),
+        .EX_have_inst  (EX_have_inst  ),
         .MEM_ALU_C     (MEM_ALU_C     ),
         .MEM_mem_write (MEM_mem_write ),
         .MEM_reg2_data (MEM_reg2_data ),
@@ -266,7 +287,8 @@ module top(
         .MEM_pc        (MEM_pc        ),
         .MEM_wd_sel    (MEM_wd_sel    ),
         .MEM_rd        (MEM_rd        ),
-        .MEM_reg_write (MEM_reg_write )
+        .MEM_reg_write (MEM_reg_write ),
+        .MEM_have_inst (MEM_have_inst )
     );
 
     // MEM
@@ -288,17 +310,21 @@ module top(
 
     // MEM2WB
     MEM2WB MEM2WB(
+        .clk            (clk),
+        .rst_n          (rst_n),
         .MEM_pc         (MEM_pc),
         .MEM_wb_data    (MEM_wb_data),
         .MEM_wd_sel     (MEM_wd_sel),
         .MEM_rd         (MEM_rd    ),
         .MEM_reg_write  (MEM_reg_write),
+        .MEM_have_inst  (MEM_have_inst),
         
         .WB_pc          (WB_pc),
         .WB_wb_data     (WB_wb_data),
         .WB_wd_sel      (WB_wd_sel),
         .WB_rd          (WB_rd),
-        .WB_reg_write   (WB_reg_write)
+        .WB_reg_write   (WB_reg_write),
+        .WB_have_inst   (WB_have_inst)
     );
 
     // WB
@@ -310,12 +336,13 @@ module top(
     );
     
     // debug
-    assign debug_wb_have_inst   = 1;
-    assign debug_wb_pc          = IF_pc;
+    assign debug_wb_have_inst   = WB_have_inst;
+    assign debug_wb_pc          = WB_pc;
     assign debug_wb_ena         = WB_reg_write;
     assign debug_wb_reg         = WB_rd;
-    always @(negedge clk) begin
-        debug_wb_value          <= WB_write_data;
-    end
+    //always @(negedge clk) begin
+        //debug_wb_value          <= WB_write_data;
+    //end
+    assign debug_wb_value       = WB_write_data;
 
 endmodule

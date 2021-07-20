@@ -9,7 +9,7 @@ module ID2EX(
     input   [31:0]  ID_pc,
     input           ID_wd_sel,
     input   [31:0]  ID_ALU_A,
-    input   [31:0]  ID_ALU_B;
+    input   [31:0]  ID_ALU_B,
     input   [2:0]   ID_branch_sel,
     input   [2:0]   ID_alu_op,
     input   [31:0]  ID_Imm_J,
@@ -18,23 +18,25 @@ module ID2EX(
     input   [1:0]   ID_pc_sel,
     input   [4:0]   ID_rd,
     input           ID_reg_write,
+    input           ID_have_inst,
     
-    output           EX_mem_write,
-    output   [31:0]  EX_reg2_data,
-    output   [31:0]  EX_Imm_U,
-    output   [1:0]   EX_wb_sel,
-    output   [31:0]  EX_pc,
-    output           EX_wd_sel,
-    output   [31:0]  EX_ALU_A,
-    output   [31:0]  EX_ALU_B;
-    output   [2:0]   EX_branch_sel,
-    output   [2:0]   EX_alu_op,
-    output   [31:0]  EX_Imm_J,
-    output   [31:0]  EX_Imm_B,
-    output   [31:0]  EX_Jalr,
-    output   [1:0]   EX_pc_sel,
-    output   [4:0]   EX_rd,
-    output           EX_reg_write
+    output reg           EX_mem_write,
+    output reg   [31:0]  EX_reg2_data,
+    output reg   [31:0]  EX_Imm_U,
+    output reg   [1:0]   EX_wb_sel,
+    output reg   [31:0]  EX_pc,
+    output reg           EX_wd_sel,
+    output reg   [31:0]  EX_ALU_A,
+    output reg   [31:0]  EX_ALU_B,
+    output reg   [2:0]   EX_branch_sel,
+    output reg   [2:0]   EX_alu_op,
+    output reg   [31:0]  EX_Imm_J,
+    output reg   [31:0]  EX_Imm_B,
+    output reg   [31:0]  EX_Jalr,
+    output reg   [1:0]   EX_pc_sel,
+    output reg   [4:0]   EX_rd,
+    output reg           EX_reg_write,
+    output reg           EX_have_inst
 );
 
 always @(posedge clk or negedge rst_n) begin
@@ -95,9 +97,9 @@ end
 
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        EX_ALU_B<= 0;
+        EX_ALU_B <= 0;
     end else begin
-        EX_ALU_B<= ID_ALU_B;
+        EX_ALU_B <= ID_ALU_B;
     end
 end
 
@@ -163,6 +165,14 @@ always @(posedge clk or negedge rst_n) begin
         EX_reg_write <= 0;
     end else begin
         EX_reg_write <= ID_reg_write;
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        EX_have_inst <= 0;
+    end else begin
+        EX_have_inst <= ID_have_inst;
     end
 end
 

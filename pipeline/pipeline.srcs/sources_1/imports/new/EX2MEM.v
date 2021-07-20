@@ -11,16 +11,18 @@ module EX2MEM (
     input           EX_wd_sel,
     input   [4:0]   EX_rd,
     input           EX_reg_write,
+    input           EX_have_inst,
 
-    output  [31:0]  MEM_ALU_C,
-    output          MEM_mem_write,
-    output  [31:0]  MEM_reg2_data,
-    output  [31:0]  MEM_Imm_U,
-    output  [1:0]   MEM_wb_sel,
-    output  [31:0]  MEM_pc,
-    output          MEM_wd_sel,
-    output  [4:0]   MEM_rd,
-    output          EX_reg_write
+    output reg  [31:0]  MEM_ALU_C,
+    output reg          MEM_mem_write,
+    output reg  [31:0]  MEM_reg2_data,
+    output reg  [31:0]  MEM_Imm_U,
+    output reg  [1:0]   MEM_wb_sel,
+    output reg  [31:0]  MEM_pc,
+    output reg          MEM_wd_sel,
+    output reg  [4:0]   MEM_rd,
+    output reg          MEM_reg_write,
+    output reg          MEM_have_inst
 );
 
 always @(posedge clk or negedge rst_n) begin
@@ -92,6 +94,14 @@ always @(posedge clk or negedge rst_n) begin
         MEM_reg_write <= 0;
     end else begin
         MEM_reg_write <= EX_reg_write;
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        MEM_have_inst <= 0;
+    end else begin
+        MEM_have_inst <= EX_have_inst;
     end
 end
 

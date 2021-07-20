@@ -22,6 +22,7 @@
 
 module NPC(
     input           clk,
+    input           rst_n,
     input   [31:0]  pc,
     input   [31:0]  Imm_J,
     input   [31:0]  Imm_B,
@@ -33,13 +34,17 @@ module NPC(
 
     reg [31:0] _npc;
 
-    always @(negedge clk) begin
-        case(pc_sel)
-            `PC_default: _npc <= pc + 32'h4;
-            `PC_branch:  _npc <= Imm_B;
-            `PC_J_inst:  _npc <= Imm_J;
-            `PC_Jalr:    _npc <= Jalr;
-        endcase
+    always @(negedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            _npc <= 0;
+        end else begin
+            case(pc_sel)
+                `PC_default: _npc <= pc + 32'h4;
+                `PC_branch:  _npc <= Imm_B;
+                `PC_J_inst:  _npc <= Imm_J;
+                `PC_Jalr:    _npc <= Jalr;
+            endcase
+        end
     end
 
     assign npc = _npc;

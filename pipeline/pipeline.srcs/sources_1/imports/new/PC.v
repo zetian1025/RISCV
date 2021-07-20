@@ -9,7 +9,7 @@ module PC(
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            new_PC <= 32'hffff_fffc;
+            new_PC <= 32'h0;
         end else begin
             new_PC <= PC_i;
         end
