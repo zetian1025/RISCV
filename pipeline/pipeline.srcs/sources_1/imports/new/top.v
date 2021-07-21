@@ -6,7 +6,7 @@ module top(
     output     [31:0]  debug_wb_pc,
     output             debug_wb_ena,
     output     [4:0]   debug_wb_reg,
-    output reg [31:0]  debug_wb_value
+    output     [31:0]  debug_wb_value
     );
     
     // IF
@@ -79,7 +79,6 @@ module top(
     reg          MEM_wd_sel;
     reg  [4:0]   MEM_rd;
     reg          MEM_reg_write;
-    wire [31:0]  MEM_DRAM_RD;
 
     // WB
     reg  [31:0]      WB_pc;
@@ -100,6 +99,9 @@ module top(
     wire [1:0]  ID_pc_sel;
     wire        ID_wd_sel;
     wire [1:0]  ID_wb_sel;
+
+    // pipeline stop
+    reg         pipeline_stop;
 
     //debug
     reg ID_have_inst;
@@ -125,6 +127,7 @@ module top(
     IF2ID IF2ID(
     	.clk            (clk            ),
         .rst_n          (rst_n          ),
+        .pipeline_stop  (pipeline_stop  ),
         .IF_pc          (IF_pc          ),
         .IF_instruction (IF_instruction ),
         .ID_pc          (ID_pc          ),
@@ -133,6 +136,8 @@ module top(
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
+            ID_have_inst <= 0;
+        end else if (pipeline_stop) begin
             ID_have_inst <= 0;
         end else if (IF_instruction != ID_instruction) begin
             ID_have_inst <= 1;
@@ -257,6 +262,7 @@ module top(
     NPC NPC(
         .clk            (clk),
         .rst_n          (rst_n),
+        .pipeline_stop  (pipeline_stop),
         .pc             (EX_pc),
         .Imm_J          (EX_Imm_J),
         .Imm_B          ((EX_Branch_legal == 1) ? EX_Imm_B : (EX_pc + 32'h4)),
@@ -333,6 +339,16 @@ module top(
         .wb_data    (WB_wb_data),
         .wd_sel     (WB_wd_sel),
         .wd         (WB_write_data)
+    );
+
+    // Hazard_detection
+    Hazard_detection Hazard_detection(
+    	.ID_rs1        (ID_rs1        ),
+        .ID_rs2        (ID_rs2        ),
+        .EX_rd         (EX_rd         ),
+        .MEM_rd        (MEM_rd        ),
+        .WB_rd         (WB_rd         ),
+        .pipeline_stop (pipeline_stop )
     );
     
     // debug

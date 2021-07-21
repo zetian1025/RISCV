@@ -23,6 +23,7 @@
 module NPC(
     input           clk,
     input           rst_n,
+    input           pipeline_stop,
     input   [31:0]  pc,
     input   [31:0]  Imm_J,
     input   [31:0]  Imm_B,
@@ -37,6 +38,8 @@ module NPC(
     always @(negedge clk or negedge rst_n) begin
         if (!rst_n) begin
             _npc <= 0;
+        end else if (pipeline_stop) begin
+            _npc <= pc;
         end else begin
             case(pc_sel)
                 `PC_default: _npc <= pc + 32'h4;
