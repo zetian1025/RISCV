@@ -264,6 +264,7 @@ module top(
         .rst_n          (rst_n),
         .pipeline_stop  (pipeline_stop),
         .pc             (EX_pc),
+        .ID_pc          (ID_pc),
         .Imm_J          (EX_Imm_J),
         .Imm_B          ((EX_Branch_legal == 1) ? EX_Imm_B : (EX_pc + 32'h4)),
         .Jalr           (EX_Jalr),

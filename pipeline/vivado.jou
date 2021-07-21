@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul 21 13:58:03 2021
+# Process ID: 9068
+# Current directory: D:/code/RISCV/pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20996 D:\code\RISCV\pipeline\pipeline.xpr
+# Log file: D:/code/RISCV/pipeline/vivado.log
+# Journal file: D:/code/RISCV/pipeline\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/code/RISCV/pipeline/pipeline.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/miniRv.v] -no_script -reset -force -quiet
+remove_files  D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/miniRv.v
+add_files -norecurse D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse {D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/ID2EX.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_B.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_A.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Control.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/RegFile.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_Imm.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/MEM2WB.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/IF2ID.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/PARAM.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/IROM.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/PC.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/EX2MEM.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_wd.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_wb.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/top.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/NPC.v D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/ALU.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/IROM.v] -no_script -reset -force -quiet
+remove_files  D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/IROM.v
+file delete -force D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/IROM.v
+export_ip_user_files -of_objects  [get_files D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_A.v] -no_script -reset -force -quiet
+remove_files  D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_A.v
+file delete -force D:/code/RISCV/pipeline/pipeline.srcs/sources_1/imports/new/Mux_op_A.v
